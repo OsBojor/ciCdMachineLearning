@@ -15,6 +15,10 @@ jobs:
       - uses: iterative/setup-cml@v2
       - name: Install Packages
         run: make install
+      - name: Install Requirements
+        run: make installReq
+      - name: Format
+        run: make format
       - name: Train
         run: make train
       - name: Evaluation
