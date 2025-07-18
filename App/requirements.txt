@@ -1,5 +1,4 @@
 scikit-learn
 skops
-autopep8
+black
 pandas
-sklearn
