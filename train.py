@@ -87,5 +87,3 @@ plt.savefig("Results/modelResults.png", dpi=120)
 
 # Save model
 sio.dump(pipe, "Model/studentsPipeline.skops")
-
-
