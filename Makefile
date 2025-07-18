@@ -5,7 +5,8 @@ installReq:
 	python --version
 	pip --version
 	python -m pip install black
-	python3 -m pip install -r requirements.txt --user
+	python -m pip install pandas
+	python -m pip install -r requirements.txt
 
 format:
 	black *.py
