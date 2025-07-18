@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 format:
-	black *.py
+	autopep8 *.py
 
 train:
 	python train.py
