@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 import skops.io as sio
+from sklearn.preprocessing import LabelEncoder
 
 # Load data
 dfStudents = pd.read_csv("Data/data.csv", sep=';')
@@ -87,3 +88,4 @@ plt.savefig("Results/modelResults.png", dpi=120)
 
 # Save model
 sio.dump(pipe, "Model/studentsPipeline.skops")
+
