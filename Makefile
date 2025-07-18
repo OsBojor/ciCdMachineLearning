@@ -3,7 +3,8 @@ install:
 
 installReq:
 	python --version
-	python pip install black
+	pip --version
+	python -m pip install black
 	python3 -m pip install -r requirements.txt --user
 
 format:
