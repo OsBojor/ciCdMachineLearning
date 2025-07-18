@@ -6,6 +6,9 @@ installReq:
 	pip --version
 	python -m pip install black
 	python -m pip install pandas
+	python -m pip install scikit-learn
+	python -m pip install skops
+	python -m pip install matplotlib
 	python -m pip install -r requirements.txt
 
 format:
