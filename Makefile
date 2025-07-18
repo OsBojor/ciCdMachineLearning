@@ -2,7 +2,9 @@ install:
 	pip install --upgrade pip
 
 installReq:
-	python3 -m pip install -r requirements.txt
+	python --version
+	python pip install black
+	python3 -m pip install -r requirements.txt --user
 
 format:
 	black *.py
