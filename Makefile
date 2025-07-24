@@ -9,6 +9,7 @@ installReq:
 	python -m pip install scikit-learn
 	python -m pip install skops
 	python -m pip install matplotlib
+	python -m pip install gradio
 	python -m pip install -r requirements.txt
 
 format:
@@ -31,3 +32,16 @@ update-branch:
 	git config --global user.email $(USER_EMAIL)
 	git commit -am "Update with new results"
 	git push --force origin HEAD:update
+
+hf-login:
+	git pull origin update
+	git switch update
+	python -m pip install -U "huggingface_hub[cli]"
+	huggingface_hub login --token $(HUGGING_FACE) --add-to-git-credential
+
+push-hub:
+	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./App --repo-type=space --commit-message="Sync App files"
+	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./Model --repo-type=space --commit-message="Sync Model files"
+	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./Results --repo-type=space --commit-message="Sync Results files"
+
+deploy: hf-login push-hub
