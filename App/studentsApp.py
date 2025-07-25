@@ -361,6 +361,7 @@ appOutputs = [gr.Label(num_top_classes=3)]
 
 # someExamples = pd.read_csv('./Model/examples.csv')
 
+
 aTitle = "Student's state prediction"
 aDescription = "Enter the details to predict students' dropout and academic sucess"
 anArticle = "This app uses CI/CD practices for machine learning"
