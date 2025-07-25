@@ -29,7 +29,7 @@ eval:
 
 update-branch:
 	git config --global user.name $(USER_NAME)
-	git config --global user.email $(USER_EMAIL)
+	git config --global user.email $(USER_EMAIL)x
 	git commit -am "Update with new results"
 	git push --force origin HEAD:update
 
@@ -37,6 +37,7 @@ hf-login:
 	git pull origin update
 	git switch update
 	python -m pip install -U "huggingface_hub[cli]"
+	echo $(HUGGING_FACE)
 	huggingface-cli login --token $(HUGGING_FACE) --add-to-git-credential
 
 push-hub:
