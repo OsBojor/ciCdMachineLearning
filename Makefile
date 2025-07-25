@@ -37,7 +37,7 @@ hf-login:
 	git pull origin update
 	git switch update
 	python -m pip install -U "huggingface_hub[cli]"
-	huggingface_hub login --token $(HUGGING_FACE) --add-to-git-credential
+	huggingface-cli login --token $(HUGGING_FACE) --add-to-git-credential
 
 push-hub:
 	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./App --repo-type=space --commit-message="Sync App files"
