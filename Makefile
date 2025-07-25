@@ -41,7 +41,7 @@ hf-login:
 
 push-hub:
 	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./App --repo-type=space --commit-message="Sync App files"
-	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./Model --repo-type=space --commit-message="Sync Model files"
-	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./Results --repo-type=space --commit-message="Sync Results files"
+	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./Model /Model --repo-type=space --commit-message="Sync Model files"
+	huggingface-cli upload osBojor/studentsAcademicSucessPrediction ./Results /Metrics --repo-type=space --commit-message="Sync Results files"
 
 deploy: hf-login push-hub
